@@ -8,10 +8,19 @@
             width: 200px;
             height: 200px;
             border: 1px solid black;
+            
         }
     </style>
     <script>
         /* TODO: write JS code here */
+      changecolor=document.getElementById('mydiv'),
+      colors=['blue' , 'red' , 'green' , 'blue']
+      function changecol(){
+        document.getElementById('mydiv').style.background-color=colors[colorIndex];
+        colorIndex=(colorIndex+1)%colors.length;
+      };
+      changecolor.addEventListener('chick',changcol)
+       window.onload=mydiv;
     </script>
 </head>
 <body>

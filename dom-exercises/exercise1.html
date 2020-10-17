@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Exercise #1: Changing text</title>
+     <script type="text/javascript">
+        function mouseOver(){
+          document.getElementById("mydiv").innerHTML="Can I help you?";
+        }
+
+        function normal(){
+            document.getElementById("mydiv").innerHTML="Hello world";
+        }
+
+     </script>
     <style>
         #mydiv {
             width: 300px;
@@ -15,8 +25,9 @@
             font-weight: bold;
         }
     </style>
-</head>
 <body>
-<div id="mydiv">Hello world</div>
+
+<div id="mydiv" onmouseover="mouseOver()" onmouseout="normal()">Hello world</div>
+
 </body>
 </html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise#3:Changing images</title>
+	<script type="text/javascript">
+		function chanimages(){
+			var x= document.getElementById('country');
+			var img= document.getElementById('Images');
+			img.src = "images/"+x.options[x.selectedIndex].value;
+			img.alt=x.options[x.selectedIndex].text;
+		}
+	</script>
+</head>
+<body>
+<form>
+	<select id="country" onchange="chanimages();">
+		<option value="noimage.png">Select</option>
+		<option value="berlin.jpg">Berlin</option>
+		<option value="london.jpg">London</option>
+	</select>
+</form>
+<img src="images/noimage.png" id="Images" border="1px solid black" alt="no image selected">
+</body>
+</html>
